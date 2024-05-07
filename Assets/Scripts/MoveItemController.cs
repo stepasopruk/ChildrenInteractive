@@ -51,12 +51,11 @@ public class MoveItemController : MonoBehaviour
 
     private IEnumerator Moving(Item item)
     {
-        Vector3 startMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 offset = item.transform.position - new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f);
+        Vector3 offset = item.transform.position - new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0f);
         while (true)
         {
             yield return _waitForEndOfFrame;
-            Vector3 newPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f);
+            Vector3 newPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0f);
             item.transform.position = newPosition + offset;
         }
     }

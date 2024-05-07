@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Item : MonoBehaviour/*, IPointerDownHandler, IPointerUpHandler*/
 {
-    //public event Action<Item, Collision2D> Collision;
+    //public event Action<Item, Collision2D> CollisionEnter;
     public event Action<Item> PointerDown;
     public event Action<Item> PointerDrag;
     public event Action<Item> PointerUp;
