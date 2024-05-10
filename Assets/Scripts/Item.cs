@@ -20,7 +20,7 @@ public class Item : MonoBehaviour/*, IPointerDownHandler, IPointerUpHandler*/
     private EventTrigger.Entry _entryPointerUp = new();
     private EventTrigger.Entry _entryPointerDrag = new();
 
-    public Sprite ItemSprite { get => itemImage.sprite; set => itemImage.sprite = value; }
+    public Image ItemImage => itemImage;
 
     private void Awake()
     {
