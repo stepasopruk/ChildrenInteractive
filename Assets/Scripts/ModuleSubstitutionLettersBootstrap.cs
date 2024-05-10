@@ -15,9 +15,10 @@ public class ModuleSubstitutionLettersBootstrap : MonoBehaviour
         foreach (LetterData data in substitutionLettersData.Letters)
         {
             Item item = itemFieldController.CreateItem(data);
-            Letter letter = letterFieldController.CreateLetter(data);
+            itemFieldController.Intermix();
+            Letter letter = letterFieldController.CreateLetter(data, item);
             moveItemController.SubscriptionMove(item);
-            substitutionController.SubscriptionSubstitution(letter, item);
+            substitutionController.SubscriptionSubstitution(letter);
         }
     }
 
