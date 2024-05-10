@@ -7,6 +7,7 @@ public class ModuleSubstitutionLettersBootstrap : MonoBehaviour
     [SerializeField] private MoveItemController moveItemController;
     [SerializeField] private ItemFieldController itemFieldController;
     [SerializeField] private LetterFieldController letterFieldController;
+    [SerializeField] private LetterHintController letterHintController;
 
     [SerializeField] private ModuleSubstitutionLettersData substitutionLettersData;
 
@@ -19,6 +20,7 @@ public class ModuleSubstitutionLettersBootstrap : MonoBehaviour
             Letter letter = letterFieldController.CreateLetter(data, item);
             moveItemController.SubscriptionMove(item);
             substitutionController.SubscriptionSubstitution(letter);
+            letterHintController.AddLetter(letter);
         }
     }
 

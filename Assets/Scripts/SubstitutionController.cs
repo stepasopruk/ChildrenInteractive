@@ -40,11 +40,10 @@ public class SubstitutionController : MonoBehaviour
         if (_currentLetter == null || _currentItem == null)
             return;
 
-        _currentLetter.ActiveLetterImage = true;
+        _currentLetter.ApprovedLetter();
         Destroy(_currentItem.gameObject);
         Debug.Log("Substitution");
         _currentItem = null;
         _currentLetter = null;
     }
 }
-
