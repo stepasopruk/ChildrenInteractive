@@ -51,18 +51,16 @@ public class LetterHintController : MonoBehaviour
         }
     }
 
-    private void Letter_Approved()
+    private void Letter_Approved(Letter letter)
     {
         _countCorrectly++;
         _countInCorrectly = 0;
         hint.HideHint();
+        UnsubscriptionSubstitution(letter);
 
         if (_countCorrectly == _letters.Count)
         {
             hint.ShowHint("Ты все сделал правильно!", HintType.Correctly);
-
-            foreach (Letter letter in _letters)
-                UnsubscriptionSubstitution(letter);
         }
     }
 }
