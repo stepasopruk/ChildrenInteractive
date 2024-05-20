@@ -6,7 +6,7 @@ namespace SubstitutionLettersModule
 {
     public class Letter : MonoBehaviour
     {
-        public event Action Approved;
+        public event Action<Letter> Approved;
         public event Action<Letter, Item> CorrectlyCollision;
         public event Action<Letter, Item> InCorrectlyCollision;
         public event Action CollisionExit;
@@ -19,7 +19,7 @@ namespace SubstitutionLettersModule
         {
             ActiveLetterImage = true;
             letterImage.gameObject.SetActive(true);
-            Approved?.Invoke();
+            Approved?.Invoke(this);
         }
 
         private Item _item;
