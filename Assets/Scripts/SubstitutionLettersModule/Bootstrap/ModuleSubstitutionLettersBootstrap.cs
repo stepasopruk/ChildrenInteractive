@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace SubstitutionLettersModule
 {
-    public class ModuleSubstitutionLettersBootstrap : MonoBehaviour
+    public class ModuleSubstitutionLettersBootstrap : BaseModuleBootstrap
     {
         [SerializeField] private SubstitutionController substitutionController;
         [SerializeField] private MoveItemController moveItemController;
@@ -13,7 +13,7 @@ namespace SubstitutionLettersModule
 
         [SerializeField] private ModuleSubstitutionLettersData substitutionLettersData;
 
-        private void Awake()
+        public override void InitializationModule()
         {
             foreach (LetterData data in substitutionLettersData.Letters)
             {
@@ -25,6 +25,5 @@ namespace SubstitutionLettersModule
                 letterHintController.AddLetter(letter);
             }
         }
-
     }
 }
