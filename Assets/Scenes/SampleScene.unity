@@ -435,7 +435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c866dd11b3f40947bc3e1a91235b523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indexModuleStartUp: 0
+  indexModuleStartUp: 11
   moduleBootstraps:
   - {fileID: 418815475}
   - {fileID: 21231000}
