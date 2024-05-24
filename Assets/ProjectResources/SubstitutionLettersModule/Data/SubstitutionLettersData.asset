@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd94b7b7b1787dc4cbd763075f15e06f, type: 3}
   m_Name: SubstitutionLettersData
   m_EditorClassIdentifier: 
+  backGroundSprite: {fileID: 21300000, guid: 3c05960ca1b574941bd8d10898b1c634, type: 3}
+  taskText: "\u0420\u0430\u0441\u0441\u0442\u0430\u0432\u044C \u043A\u0430\u0440\u0442\u0438\u043D\u043A\u0438
+    \u0432 \u0430\u043B\u0444\u043E\u0432\u0438\u0442\u043D\u043E\u043C \u043F\u043E\u0440\u044F\u0434\u043A\u0435"
   letters:
   - {fileID: 11400000, guid: 1ecf5258542a3d245a856d9c27d29863, type: 2}
   - {fileID: 11400000, guid: 8dba7f3451db493469abc4f88e5c1d78, type: 2}

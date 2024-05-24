@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -5,25 +6,38 @@ namespace SubstitutionLettersModule
 {
     public class ModuleSubstitutionLettersBootstrap : BaseModuleBootstrap
     {
+        [SerializeField] private ModuleSubstitutionLettersData moduleData;
+
         [SerializeField] private SubstitutionController substitutionController;
         [SerializeField] private MoveItemController moveItemController;
         [SerializeField] private ItemFieldController itemFieldController;
         [SerializeField] private LetterFieldController letterFieldController;
         [SerializeField] private LetterHintController letterHintController;
 
-        [SerializeField] private ModuleSubstitutionLettersData substitutionLettersData;
 
         public override void InitializationModule()
         {
-            foreach (LetterData data in substitutionLettersData.Letters)
+            InitializeLetters();
+        }
+
+        private void InitializeLetters()
+        {
+            foreach (LetterData data in moduleData.Letters)
             {
                 Item item = itemFieldController.CreateItem(data);
-                itemFieldController.Intermix();
                 Letter letter = letterFieldController.CreateLetter(data, item);
-                moveItemController.SubscriptionMove(item);
-                substitutionController.SubscriptionSubstitution(letter);
-                letterHintController.AddLetter(letter);
+                InitializeController(letter, item);
             }
         }
+
+        private void InitializeController(Letter letter, Item item)
+        {
+            itemFieldController.Intermix();
+            moveItemController.SubscriptionMove(item);
+            substitutionController.SubscriptionSubstitution(letter);
+            letterHintController.AddLetter(letter);
+        }
+
+        public override ModuleDataBase GetModuleData() => moduleData;
     }
 }
