@@ -10,8 +10,11 @@ namespace PathSyllablesModule
     {
         [SerializeField] private ModulePathSyllablesData moduleData;
 
+        [SerializeField] private StoneMatrixController stoneMatrixController;
+
         public override void InitializationModule()
         {
+            stoneMatrixController.Initialize();
         }
 
         public override ModuleDataBase GetModuleData() => moduleData;
