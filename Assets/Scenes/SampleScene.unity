@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moduleData: {fileID: 11400000, guid: b3d174852f7944e47a85c907fd381ab5, type: 2}
-  stoneMatrixController: {fileID: 1340159255}
+  stoneMatrixController: {fileID: 629910020}
 --- !u!1 &254078317
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,8 +535,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 629910019}
+  - component: {fileID: 629910020}
   m_Layer: 0
-  m_Name: Ga
+  m_Name: StoneMatrixController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -557,6 +558,31 @@ Transform:
   m_Father: {fileID: 21230999}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &629910020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629910018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa466f2ad06465f47949935fb61a0137, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contentMatrix: {fileID: 1340159253}
+  stoneSprites:
+  - {fileID: 21300000, guid: ddc107555ca46174e86483d503c7157a, type: 3}
+  - {fileID: 21300000, guid: 8c34cebe33440394f9762bc1ba147aa2, type: 3}
+  - {fileID: 21300000, guid: 64d7aebc795b5ba4b826d00a2567fc41, type: 3}
+  - {fileID: 21300000, guid: 9c0e44e1d149b234f95310b0122402b8, type: 3}
+  - {fileID: 21300000, guid: e8d314b41ec410b4687f66600a933d49, type: 3}
+  - {fileID: 21300000, guid: 16fbf4ad77c80b94ab28899e1ca8ba69, type: 3}
+  - {fileID: 21300000, guid: 0b38f79290283ce4497ca07e7c6423e3, type: 3}
+  stoneColumnPrefab: {fileID: 1983061755354311723, guid: a75e6b1bc37f9174fa43354b86930ea5, type: 3}
+  countColumn: 6
+  maxCountStone: 3
+  chanceSpawnStone: 70
 --- !u!1 &641441772
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,7 +1153,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1340159253}
   - component: {fileID: 1340159254}
-  - component: {fileID: 1340159255}
   m_Layer: 5
   m_Name: StoneMatrix
   m_TagString: Untagged
@@ -1181,30 +1206,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &1340159255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1340159252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa466f2ad06465f47949935fb61a0137, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stoneSprites:
-  - {fileID: 21300000, guid: ddc107555ca46174e86483d503c7157a, type: 3}
-  - {fileID: 21300000, guid: 8c34cebe33440394f9762bc1ba147aa2, type: 3}
-  - {fileID: 21300000, guid: 64d7aebc795b5ba4b826d00a2567fc41, type: 3}
-  - {fileID: 21300000, guid: 9c0e44e1d149b234f95310b0122402b8, type: 3}
-  - {fileID: 21300000, guid: e8d314b41ec410b4687f66600a933d49, type: 3}
-  - {fileID: 21300000, guid: 16fbf4ad77c80b94ab28899e1ca8ba69, type: 3}
-  - {fileID: 21300000, guid: 0b38f79290283ce4497ca07e7c6423e3, type: 3}
-  stoneColumnPrefab: {fileID: 1983061755354311723, guid: a75e6b1bc37f9174fa43354b86930ea5, type: 3}
-  countColumn: 6
-  maxCountStone: 3
-  chanceSpawnStone: 70
 --- !u!1 &1378947046
 GameObject:
   m_ObjectHideFlags: 0

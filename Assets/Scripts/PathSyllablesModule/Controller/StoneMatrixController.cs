@@ -6,6 +6,7 @@ namespace PathSyllablesModule
 {
     public class StoneMatrixController : MonoBehaviour
     {
+        [SerializeField] private Transform contentMatrix;
         [SerializeField] private Sprite[] stoneSprites;
         [SerializeField] private StoneColumn stoneColumnPrefab;
         [SerializeField] private int countColumn;
@@ -18,7 +19,7 @@ namespace PathSyllablesModule
         {
             for (int i = 0; i < countColumn; i++)
             {
-                StoneColumn stoneColumn = Instantiate(stoneColumnPrefab, transform);
+                StoneColumn stoneColumn = Instantiate(stoneColumnPrefab, contentMatrix);
                 stoneColumn.Initialize(stoneSprites, maxCountStone, chanceSpawnStone);
                 _stoneColumns.Add(stoneColumn);
             }
